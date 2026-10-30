@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>«Евгений Онегин» — презентация</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#d2ac66;--lp:#f4efe4;--lt:#1e2430;--acc:#8a2f3b;--card:#fffdf8;--cardb:#d9cfba;--cardt:#3a3f4a;--cardh:#1e2430;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lp:#232a38;--lt:#f4efe4;--acc:#d2ac66;--card:#2f3748;--cardb:#465068;--cardt:#d8d1c0;--cardh:#f4efe4;color-scheme:dark}}
+:root[data-theme="dark"]{--lp:#232a38;--lt:#f4efe4;--acc:#d2ac66;--card:#2f3748;--cardb:#465068;--cardt:#d8d1c0;--cardh:#f4efe4;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:#14181f;font-family:Inter,system-ui,sans-serif;overflow:hidden}
+h1,h2,h3,p{margin:0}
+main{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+.top{position:fixed;left:0;right:0;top:0;z-index:55;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;text-align:center;background:#14181f;color:#f4efe4;font-size:clamp(14px,1.7vw,22px);font-weight:600;letter-spacing:.05em;border-bottom:2px solid var(--gold)}
+.bar{position:fixed;left:0;bottom:0;height:4px;background:var(--gold);z-index:60;width:0;transition:width .4s}
+.s{position:relative;height:100%;min-height:600px;scroll-snap-align:start;overflow:hidden;display:flex;flex-direction:column;gap:clamp(20px,3.5vh,40px);padding:clamp(56px,9vh,96px) clamp(20px,6vw,110px) clamp(72px,9vh,110px)}
+.light{background:var(--lp);color:var(--lt)}
+.dark{background:#1e2430;color:#f4efe4;--acc:#d2ac66;--card:#2c3446;--cardb:#465068;--cardt:#d8d1c0;--cardh:#f4efe4}
+.wine{background:#8a2f3b;color:#f4efe4;--acc:#f0d9a8;--card:#7a2733;--cardb:#b4606b;--cardt:#f0e2dd;--cardh:#f4efe4}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.eyebrow{font-size:clamp(13px,1.4vw,20px);letter-spacing:.18em;text-transform:uppercase;color:var(--acc);font-weight:600;margin-bottom:10px}
+h2{font-family:Lora,Georgia,serif;font-size:clamp(32px,4.6vw,68px);line-height:1.1;font-weight:600}
+.ill{flex:none;width:clamp(64px,7vw,110px);aspect-ratio:3/4;border-radius:12px;border:3px solid var(--acc);overflow:hidden}
+.ill svg,.photo svg,.mi svg{width:100%;height:100%;display:block}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,1.6vw,24px);align-content:start}
+.card{background:var(--card);border:2px solid var(--cardb);border-radius:14px;padding:clamp(16px,2vw,28px);display:flex;flex-direction:column;gap:10px;cursor:pointer;text-align:left;font:inherit;color:inherit;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover,.card:focus-visible{transform:translateY(-4px);border-color:var(--acc);box-shadow:0 14px 30px rgba(0,0,0,.2);outline:none}
+.card b{font-family:Lora,Georgia,serif;font-size:clamp(28px,3.4vw,52px);color:var(--acc);line-height:1}
+.card h3{font-family:Lora,Georgia,serif;font-size:clamp(19px,2vw,30px);color:var(--cardh);line-height:1.2}
+.card p{font-size:clamp(14px,1.5vw,21px);line-height:1.45;color:var(--cardt)}
+.card .more{margin-top:auto;padding-top:6px;font-size:clamp(13px,1.2vw,17px);font-weight:600;color:var(--acc)}
+.byline{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}.who{font-size:clamp(16px,2vw,30px);font-weight:600;color:var(--gold);padding-left:28px;border-left:3px solid var(--gold)}.hint{font-size:clamp(13px,1.3vw,18px);opacity:.75}
+h1{font-family:Lora,Georgia,serif;font-size:clamp(44px,9vw,140px);line-height:1.02;font-weight:600}
+.sub{font-family:Lora,Georgia,serif;font-style:italic;font-size:clamp(20px,2.6vw,40px);opacity:.9}
+.quote{font-family:Lora,Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(34px,6.4vw,90px);line-height:1.12}
+.drift{position:absolute;left:0;white-space:nowrap;font-family:Lora,Georgia,serif;font-style:italic;font-weight:600;font-size:clamp(90px,15vw,220px);opacity:.07;pointer-events:none;animation:drift 24s linear infinite}
+.photo{position:absolute;width:clamp(110px,16vw,280px);aspect-ratio:3/4;border-radius:18px;border:5px solid #f4efe4;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite alternate}
+.rise{opacity:0}
+.s.on .rise{animation:rise .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i,0)*.1s)}
+.modal{position:fixed;inset:0;z-index:70;background:rgba(10,12,18,.7);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.box{width:min(720px,100%);max-height:90%;overflow-y:auto;background:#fffdf8;color:#1e2430;border-radius:20px;border:3px solid #8a2f3b;padding:clamp(20px,3.4vw,40px);display:flex;gap:28px;animation:pop .4s cubic-bezier(.3,1.4,.5,1)}
+.mi{flex:none;width:120px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;align-self:flex-start}
+.mt{display:flex;flex-direction:column;gap:12px}
+.mt small{font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:#8a2f3b;font-weight:600}
+.mt h3{font-family:Lora,Georgia,serif;font-size:clamp(26px,3.2vw,40px);line-height:1.15}
+.mt p{font-size:clamp(17px,1.9vw,22px);line-height:1.6;color:#2c3340}
+.mt button{align-self:flex-start;margin-top:8px;font:inherit;font-weight:600;font-size:17px;padding:10px 26px;border-radius:999px;border:0;background:#8a2f3b;color:#f4efe4;cursor:pointer}
+.nav{position:fixed;right:clamp(12px,2vw,28px);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;gap:10px;align-items:center;color:#f4efe4;font-size:17px;font-weight:600}
+.nav button{font:inherit;width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);background:rgba(20,24,31,.85);color:#f4efe4;cursor:pointer}
+.nav button:hover{background:var(--gold);color:#1e2430}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes drift{from{transform:translateX(-60%)}to{transform:translateX(100vw)}}
+@keyframes float{from{transform:translate(0,0) rotate(-5deg)}to{transform:translate(-30px,-40px) rotate(5deg)}}
+@keyframes sweep{0%{left:2%;transform:rotate(-6deg)}50%{left:calc(98% - clamp(110px,16vw,280px));transform:rotate(6deg)}100%{left:2%;transform:rotate(-6deg)}}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+@media (max-width:600px){.box{flex-direction:column}.mi{width:80px}.ill{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.rise{opacity:1}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<main id="deck"></main>
+<div class="nav"><button id="prev" aria-label="Назад">‹</button><span id="cnt"></span><button id="next" aria-label="Вперёд">›</button></div>
+<div class="modal" id="modal"><div class="box"><div class="mi" id="mi"></div><div class="mt"><small id="ms"></small><h3 id="mh"></h3><p id="mp"></p><button id="close">Закрыть</button></div></div></div>
+<script>
+var SV={
+manor:'<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#2b3556"/><circle cx="230" cy="80" r="34" fill="#f4efe4"/><rect y="290" width="300" height="110" fill="#3d5a3a"/><rect x="60" y="210" width="180" height="90" fill="#e8dcc0"/><polygon points="50,210 150,150 250,210" fill="#8a2f3b"/><rect x="85" y="230" width="22" height="70" fill="#f4efe4"/><rect x="139" y="230" width="22" height="70" fill="#f4efe4"/><rect x="193" y="230" width="22" height="70" fill="#f4efe4"/><circle cx="19" cy="255" r="28" fill="#2f4a2e"/><circle cx="281" cy="255" r="28" fill="#2f4a2e"/></svg>',
+letter:'<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#3a1f2b"/><circle cx="150" cy="230" r="110" fill="#d2ac66" opacity=".22"/><rect x="130" y="240" width="40" height="110" fill="#f4efe4"/><ellipse cx="150" cy="215" rx="11" ry="24" fill="#d2ac66"/><rect x="60" y="320" width="180" height="60" fill="#fffaf0" transform="rotate(-6 150 350)"/><g stroke="#8a2f3b" stroke-width="3"><line x1="85" y1="340" x2="215" y2="334"/><line x1="85" y1="355" x2="195" y2="349"/></g></svg>',
+duel:'<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#4a3b5c"/><circle cx="150" cy="260" r="70" fill="#d2ac66"/><rect y="300" width="300" height="100" fill="#2d3a2d"/><polygon points="120,300 180,300 170,220 130,220" fill="#3a2a20"/><g stroke="#2a1d16" stroke-width="7"><line x1="150" y1="200" x2="70" y2="130"/><line x1="150" y1="200" x2="230" y2="130"/><line x1="150" y1="200" x2="70" y2="270"/><line x1="150" y1="200" x2="230" y2="270"/></g><circle cx="34" cy="240" r="26" fill="#1c261c"/><circle cx="266" cy="240" r="26" fill="#1c261c"/></svg>',
+spb:'<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#243a5e"/><circle cx="70" cy="70" r="26" fill="#f4efe4"/><rect x="60" y="240" width="180" height="60" fill="#e8dcc0"/><rect x="146" y="130" width="8" height="110" fill="#d2ac66"/><polygon points="150,70 160,130 140,130" fill="#d2ac66"/><rect x="75" y="255" width="150" height="10" fill="#8a2f3b"/><rect y="300" width="300" height="100" fill="#1b2c4a"/><g stroke="#6f8ab5" stroke-width="3"><line x1="30" y1="330" x2="110" y2="330"/><line x1="150" y1="350" x2="260" y2="350"/><line x1="60" y1="375" x2="150" y2="375"/></g></svg>',
+quill:'<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#2b3556"/><rect x="50" y="260" width="200" height="100" fill="#fffaf0"/><line x1="150" y1="260" x2="150" y2="360" stroke="#bbb" stroke-width="3"/><path d="M235 60 Q140 110 150 250 Q200 190 235 60Z" fill="#f4efe4"/><line x1="150" y1="250" x2="138" y2="290" stroke="#d2ac66" stroke-width="5"/><g stroke="#8a2f3b" stroke-width="3"><line x1="65" y1="285" x2="135" y2="285"/><line x1="165" y1="285" x2="235" y2="285"/><line x1="65" y1="310" x2="135" y2="310"/></g></svg>',
+theatre:'<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#1e2430"/><polygon points="150,0 80,330 220,330" fill="#f4efe4" opacity=".12"/><polygon points="0,0 130,0 90,400 0,400" fill="#8a2f3b"/><polygon points="300,0 170,0 210,400 300,400" fill="#8a2f3b"/><rect y="330" width="300" height="70" fill="#5a3a22"/><circle cx="140" cy="290" r="17" fill="#d2ac66"/><line x1="156" y1="290" x2="156" y2="190" stroke="#d2ac66" stroke-width="6"/><path d="M156 190 Q190 200 190 235" stroke="#d2ac66" stroke-width="6" fill="none"/></svg>'};
+ 
+SV.onegin='<svg viewBox="0 0 300 400"><defs><linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2342"/><stop offset="1" stop-color="#8a2f3b"/></linearGradient></defs><rect width="300" height="400" fill="url(#a1)"/><circle cx="215" cy="120" r="62" fill="#f4efe4" opacity=".92"/><rect y="340" width="300" height="60" fill="#10131c"/><g fill="#10131c"><rect x="118" y="120" width="64" height="12" rx="3"/><rect x="132" y="82" width="36" height="42" rx="4"/><circle cx="150" cy="150" r="20"/><path d="M118 172 Q150 160 182 172 L205 342 L95 342Z"/></g><line x1="196" y1="200" x2="212" y2="340" stroke="#10131c" stroke-width="5"/><circle cx="196" cy="200" r="6" fill="#d2ac66"/><line x1="50" y1="340" x2="50" y2="200" stroke="#10131c" stroke-width="6"/><circle cx="50" cy="192" r="34" fill="#d2ac66" opacity=".2"/><circle cx="50" cy="192" r="14" fill="#d2ac66"/></svg>';
+SV.manor='<svg viewBox="0 0 300 400"><defs><linearGradient id="a2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101a38"/><stop offset="1" stop-color="#e0a45a"/></linearGradient></defs><rect width="300" height="400" fill="url(#a2)"/><g fill="#f4efe4"><circle cx="40" cy="50" r="2"/><circle cx="120" cy="30" r="2"/><circle cx="230" cy="60" r="2.5"/><circle cx="270" cy="25" r="2"/><circle cx="80" cy="95" r="1.5"/></g><rect y="300" width="300" height="100" fill="#1e2a1f"/><rect x="70" y="215" width="160" height="85" fill="#efe3c8"/><polygon points="60,215 150,165 240,215" fill="#6e2430"/><g fill="#fff8e6"><rect x="88" y="225" width="14" height="75"/><rect x="143" y="225" width="14" height="75"/><rect x="198" y="225" width="14" height="75"/></g><rect x="132" y="262" width="36" height="38" fill="#3a2a20"/><g fill="#0f1a12"><polygon points="20,300 40,200 60,300"/><polygon points="240,300 260,190 280,300"/><polygon points="0,300 10,240 24,300"/></g></svg>';
+SV.letter='<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#2a1830"/><path d="M60 380 V160 Q60 70 150 70 Q240 70 240 160 V380Z" fill="#f0c98a" opacity=".35"/><path d="M60 380 V160 Q60 70 150 70 Q240 70 240 160 V380Z" fill="none" stroke="#d2ac66" stroke-width="6"/><line x1="150" y1="70" x2="150" y2="380" stroke="#d2ac66" stroke-width="4"/><g fill="#1a0f1f"><circle cx="118" cy="190" r="22"/><circle cx="100" cy="176" r="12"/><path d="M96 212 Q118 226 140 212 L170 380 L70 380Z"/></g><rect x="190" y="320" width="20" height="60" fill="#f4efe4"/><circle cx="200" cy="306" r="40" fill="#d2ac66" opacity=".2"/><ellipse cx="200" cy="304" rx="7" ry="16" fill="#d2ac66"/></svg>';
+SV.duel='<svg viewBox="0 0 300 400"><defs><linearGradient id="a3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b2f5c"/><stop offset=".6" stop-color="#e58a5a"/><stop offset="1" stop-color="#f6d28b"/></linearGradient></defs><rect width="300" height="400" fill="url(#a3)"/><circle cx="150" cy="250" r="55" fill="#fbe7b0"/><rect y="290" width="300" height="110" fill="#1f2a23"/><polygon points="130,290 170,290 162,215 138,215" fill="#2a1d16"/><g stroke="#2a1d16" stroke-width="6"><line x1="150" y1="200" x2="85" y2="150"/><line x1="150" y1="200" x2="215" y2="150"/><line x1="150" y1="200" x2="85" y2="250"/><line x1="150" y1="200" x2="215" y2="250"/></g><g fill="#0d120f"><circle cx="40" cy="268" r="9"/><rect x="33" y="277" width="14" height="48" rx="5"/><circle cx="260" cy="268" r="9"/><rect x="253" y="277" width="14" height="48" rx="5"/></g></svg>';
+SV.spb='<svg viewBox="0 0 300 400"><defs><linearGradient id="a4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16294f"/><stop offset="1" stop-color="#d98c6c"/></linearGradient></defs><rect width="300" height="400" fill="url(#a4)"/><circle cx="240" cy="90" r="24" fill="#f4efe4"/><g fill="#0f1a33"><rect x="30" y="250" width="240" height="60"/><rect x="144" y="120" width="12" height="130"/><polygon points="150,60 162,122 138,122"/><rect x="70" y="225" width="24" height="25"/><rect x="206" y="225" width="24" height="25"/></g><circle cx="150" cy="56" r="5" fill="#d2ac66"/><rect y="310" width="300" height="90" fill="#0f1a33"/><g stroke="#d98c6c" stroke-width="3" opacity=".6"><line x1="40" y1="335" x2="120" y2="335"/><line x1="160" y1="352" x2="262" y2="352"/><line x1="70" y1="375" x2="170" y2="375"/></g></svg>';
+SV.quill='<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#f1e6cf"/><g stroke="#8a2f3b" stroke-width="4" opacity=".7"><line x1="50" y1="260" x2="250" y2="260"/><line x1="50" y1="290" x2="230" y2="290"/><line x1="50" y1="320" x2="250" y2="320"/><line x1="50" y1="350" x2="200" y2="350"/></g><rect x="195" y="190" width="70" height="55" rx="10" fill="#1e2430"/><rect x="215" y="176" width="30" height="16" fill="#1e2430"/><path d="M230 180 Q120 70 70 40 Q110 140 200 190Z" fill="#fffaf0" stroke="#1e2430" stroke-width="3"/><line x1="225" y1="182" x2="90" y2="60" stroke="#1e2430" stroke-width="3"/></svg>';
+SV.book='<svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#7a2733"/><circle cx="150" cy="170" r="110" fill="#f0d9a8" opacity=".22"/><path d="M40 330 L150 300 L150 170 L40 200Z" fill="#fffaf0"/><path d="M260 330 L150 300 L150 170 L260 200Z" fill="#f4e8cc"/><g stroke="#8a2f3b" stroke-width="3"><line x1="58" y1="215" x2="132" y2="196"/><line x1="58" y1="240" x2="132" y2="221"/><line x1="58" y1="265" x2="132" y2="246"/><line x1="168" y1="196" x2="242" y2="215"/><line x1="168" y1="221" x2="242" y2="240"/><line x1="168" y1="246" x2="242" y2="265"/></g></svg>';
+SV.theatre='<svg viewBox="0 0 300 400"><defs><radialGradient id="a5" cx=".5" cy=".3" r=".8"><stop offset="0" stop-color="#f0d9a8"/><stop offset="1" stop-color="#2a1a22"/></radialGradient></defs><rect width="300" height="400" fill="url(#a5)"/><path d="M0 0 H300 V60 Q150 20 0 60Z" fill="#8a2f3b"/><polygon points="0,40 70,40 40,400 0,400" fill="#8a2f3b"/><polygon points="300,40 230,40 260,400 300,400" fill="#8a2f3b"/><rect y="340" width="300" height="60" fill="#3b2418"/><g fill="#1e2430"><circle cx="130" cy="300" r="14"/><circle cx="170" cy="290" r="14"/><rect x="141" y="190" width="5" height="110"/><rect x="181" y="180" width="5" height="110"/><polygon points="141,190 186,180 186,198 141,208"/></g></svg>';
+var S=[
+{k:'cover'},
+{k:'cards',c:'light',e:'01 · История',t:'История создания',ill:'manor',cards:[
+["1823–1830","Работа над романом","Кишинёв, Одесса, Михайловское, Болдино: больше семи лет труда.","Пушкин начал роман 9 мая 1823 года в Кишинёве, во время южной ссылки, и продолжил в Одессе. Значительная часть глав написана в Михайловском в 1824–1826 годах. Восьмую главу он закончил в Болдине осенью 1830 года."],
+["1825–1832","Выход по главам","Каждая глава печаталась отдельной книжкой и становилась событием.","Первая глава вышла в начале 1825 года, последняя, восьмая, в 1832-м. Читатели ждали продолжения, обсуждали героев и спорили о судьбе Татьяны и Онегина."],
+["1833","Полное издание","Роман вышел целиком, с авторскими примечаниями.","В 1833 году «Евгений Онегин» впервые вышел отдельной книгой в полном виде. Десятую главу Пушкин сжёг, от неё сохранились только зашифрованные отрывки."]]},
+{k:'cards',c:'light',e:'02 · Герои',t:'Главные герои',ill:'letter',cards:[
+["","Евгений Онегин","Столичный дворянин, разочарованный и скучающий: «лишний человек».","Молодой петербургский дворянин, воспитанный французским гувернёром. Светская жизнь ему наскучила. Получив наследство от дяди, он едет в деревню, но и там скучает. Отказ Татьяне и дуэль с Ленским ломают его жизнь; в финале он понимает, что любит её, но опаздывает."],
+["","Татьяна Ларина","Мечтательная, искренняя, сильная; взрослеет вместе с романом.","Дочь помещика, выросла в деревне и много читает. Первой пишет Онегину о любви. Позже, став замужней княгиней, отвечает ему отказом: «Но я другому отдана; я буду век ему верна»."],
+["","Владимир Ленский","Юный поэт-романтик, друг Онегина, погибший на дуэли.","Восемнадцатилетний поэт-романтик, учился в Германии, в Гёттингене. Влюблён в Ольгу и пишет элегии. Ссора с Онегиным на именинах Татьяны приводит к дуэли, в которой Ленский погибает."],
+["","Ольга Ларина","Весёлая и беззаботная сестра Татьяны, невеста Ленского.","Младшая сестра Татьяны, весёлая и беззаботная. Невеста Ленского, но после его гибели быстро выходит замуж за улана. Пушкин противопоставляет её задумчивой Татьяне."]]},
+{k:'cards',c:'light',e:'03 · Сюжет',t:'Сюжет',ill:'duel',cards:[
+["1","Знакомство","Онегин приезжает в деревню, встречает Ленского и семью Лариных.","Онегин приезжает в деревню после смерти дяди. Здесь он сближается с Ленским: они проводят вечера вместе, споря о жизни, поэзии и любви. Ленский знакомит его с Ларинами."],
+["2","Письмо Татьяны","Татьяна признаётся в любви, Онегин отвечает холодным отказом.","Татьяна влюбляется в Онегина и ночью пишет ему письмо. Онегин отвечает в саду: честно, но холодно, говорит, что не создан для семейной жизни. Это один из ключевых моментов романа."],
+["3","Дуэль","Ссора на балу заканчивается гибелью Ленского.","На именинах Татьяны раздражённый Онегин танцует с Ольгой. Ленский вызывает его на дуэль. На рассвете у мельницы Онегин убивает друга и уезжает."],
+["4","Встреча в Петербурге","Онегин влюбляется в Татьяну, но она уже замужем и верна долгу.","Спустя годы Онегин возвращается в Петербург и на балу видит Татьяну, теперь княгиню. Он влюбляется, пишет ей, но получает отказ: она любит его, но верна мужу."]]},
+{k:'cards',c:'light',e:'04 · Главы',t:'Восемь глав романа',ill:'spb',cards:[
+["1","Глава первая","Онегин в Петербурге: балы, театры, скука.","Рассказ о воспитании и жизни Онегина в столице. В конце главы он получает известие о болезни дяди и едет в деревню."],
+["2","Глава вторая","Деревня. Ленский и семья Лариных.","Описаны Ленский, семья Лариных и характеры сестёр. Онегин и Ленский подружились, несмотря на разницу в характерах."],
+["3","Глава третья","Татьяна влюбляется и пишет письмо.","Татьяна влюбляется в Онегина и пишет ему письмо. Глава заканчивается тем, что она ждёт его ответа."],
+["4","Глава четвёртая","Ответ Онегина в саду.","Онегин произносит своё «наставление» Татьяне. К концу главы Ленский зовёт его на именины к Лариным."],
+["5","Глава пятая","Сон Татьяны и именины.","Татьяне снится страшный сон, затем святочные гадания. Именины заканчиваются ссорой Онегина и Ленского."],
+["6","Глава шестая","Дуэль у мельницы.","Ленский вызывает Онегина. Описаны ночь перед дуэлью и рассвет. Ленский погибает, Онегин уезжает из деревни."],
+["7","Глава седьмая","Татьяна в Москве.","Татьяна приходит в пустой дом Онегина и читает его книги. Мать везёт её в Москву, на «ярмарку невест»."],
+["8","Глава восьмая","Встреча в Петербурге.","Онегин возвращается из странствий, видит Татьяну на балу, пишет ей и приходит. Татьяна отвечает отказом."]]},
+{k:'cards',c:'dark',e:'05 · Форма',t:'Онегинская строфа',ill:'quill',cards:[
+["14","строк в строфе","Строфа, придуманная Пушкиным для романа.","Онегинская строфа состоит из 14 строк четырёхстопного ямба. Пушкин придумал её специально для романа, и она стала одной из самых узнаваемых форм русской поэзии. Всего в романе около четырёхсот таких строф."],
+["Ямб","Стихотворный размер","Четырёхстопный ямб: четыре стопы в каждой строке.","Ямб — двусложный размер, в котором ударение падает на чётные слоги. Четырёхстопным он называется, потому что в строке четыре такие стопы. Пример: «Мой дядя самых честных правил»."],
+["АбАб","Схема рифмовки","АбАб ВВгг ДееД жж.","Сначала перекрёстная рифма, затем парная, потом опоясывающая и в конце снова парная. Заглавные буквы обозначают женские рифмы, строчные — мужские."]]},
+{k:'quote'},
+{k:'cards',c:'light',e:'07 · Итоги',t:'Значение романа',ill:'theatre',cards:[
+["","В литературе","Первый русский реалистический роман.","Роман считают первым русским реалистическим романом. Образ Онегина открыл галерею «лишних людей»: Печорин у Лермонтова, Рудин у Тургенева, Обломов у Гончарова."],
+["","В языке","Строки романа стали крылатыми выражениями.","Многие строки стали афоризмами, например «Мой дядя самых честных правил». Обороты из «Онегина» живут в речи и сегодня."],
+["","В музыке и театре","Опера Чайковского (1879), балет, спектакли и фильмы.","Опера Чайковского «Евгений Онегин» поставлена в 1879 году и идёт на сценах мира. По роману создан балет Джона Крэнко (1965), множество спектаклей и фильмов."]]},
+{k:'end'}
+];
+var QC=[["","Кто такой Белинский","Критик, давший роману знаменитое определение.","Виссарион Белинский (1811–1848) — русский критик. В цикле статей о Пушкине он подробно разобрал «Онегина» и назвал его «энциклопедией русской жизни»."],["","Почему «энциклопедия»","Роман показывает быт и нравы целой эпохи.","В романе описаны жизнь столицы и усадьбы, балы и деревенские праздники, театр, моды, чтение, обычаи. Читая «Онегина», можно увидеть, как жили люди 1820-х годов."]];
+S[6].cards=QC;
+var deck=document.getElementById('deck');
+function R(i,tag,cls,h,st){return '<'+tag+' class="rise '+(cls||'')+'" style="--i:'+i+';'+(st||'')+'">'+h+'</'+tag+'>'}
+function ph(k,st){return '<div class="photo" aria-hidden="true" style="'+st+'">'+SV[k]+'</div>'}
+function cards(s,si){return '<div class="row">'+s.cards.map(function(c,j){return '<button class="card rise" style="--i:'+(j+2)+'" data-s="'+si+'" data-j="'+j+'">'+(c[0]?'<b>'+c[0]+'</b>':'')+'<h3>'+c[1]+'</h3><p>'+c[2]+'</p><span class="more">Подробнее +</span></button>'}).join('')+'</div>'}
+function body(s,i){
+ if(s.k=='cover')return '<div class="drift" style="top:8%">Онегин</div>'+ph('onegin','right:7%;top:22%')+R(0,'p','eyebrow','Роман в стихах · 1823–1831')+R(1,'h1','','Евгений<br>Онегин')+R(2,'div','byline','<span class="sub">Александр Сергеевич Пушкин</span><span class="who">Шавкатов Шерзод · Собиржонов Самир</span>')+R(3,'p','hint','Листай стрелками и нажимай на блоки, чтобы узнать больше');
+ if(s.k=='cards')return '<div class="head rise"><div><p class="eyebrow">'+s.e+'</p><h2>'+s.t+'</h2></div><div class="ill">'+SV[s.ill]+'</div></div>'+cards(s,i);
+ if(s.k=='quote')return '<div class="head rise"><div><p class="eyebrow">06 · Оценка</p></div><div class="ill">'+SV.book+'</div></div>'+R(1,'p','quote','«Энциклопедия русской жизни»')+R(2,'p','sub','Так назвал «Онегина» критик В. Г. Белинский.')+cards(S[6],i);
+ return '<div class="drift" style="top:8%;animation-duration:14s">Евгений Онегин · Евгений Онегин</div>'+ph('theatre','left:2%;top:36%;animation:sweep 8s ease-in-out infinite')+ph('spb','right:6%;bottom:14%;width:clamp(90px,11vw,190px);animation-duration:5s')+R(0,'p','eyebrow','Конец')+R(1,'h1','','Спасибо<br>за внимание!');
+}
+S.forEach(function(s,i){var e=document.createElement('section');e.className='s '+(s.k=='quote'?'wine':s.k=='cover'||s.k=='end'?'dark':s.c);e.dataset.i=i;e.innerHTML=body(s,i);if(s.k=='cover'||s.k=='end')e.style.justifyContent='center';deck.appendChild(e)});
+var secs=[].slice.call(deck.children),cur=0,md=document.getElementById('modal');
+function go(i){i=Math.max(0,Math.min(S.length-1,i));secs[i].scrollIntoView({behavior:'smooth'})}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');cur=+e.target.dataset.i;document.getElementById('cnt').textContent=(cur+1)+' / '+S.length;document.getElementById('bar').style.width=((cur+1)/S.length*100)+'%'}})},{root:deck,threshold:.55});
+secs.forEach(function(s){io.observe(s)});
+function open(si,j){var s=S[si],c=s.cards[j];document.getElementById('ms').textContent=s.e||'Оценка';document.getElementById('mh').textContent=c[1];document.getElementById('mp').textContent=c[3];document.getElementById('mi').innerHTML=SV[s.ill||'quill'];md.classList.add('open')}
+function shut(){md.classList.remove('open')}
+deck.addEventListener('click',function(e){var c=e.target.closest('.card');if(c)open(+c.dataset.s,+c.dataset.j)});
+document.getElementById('close').onclick=shut;
+md.onclick=function(e){if(e.target===md)shut()};
+document.getElementById('prev').onclick=function(){go(cur-1)};
+document.getElementById('next').onclick=function(){go(cur+1)};
+document.addEventListener('keydown',function(e){var k=e.key;if(md.classList.contains('open')){if(k=='Escape')shut();return}if(['ArrowDown','ArrowRight','PageDown'].indexOf(k)>-1){e.preventDefault();go(cur+1)}else if(['ArrowUp','ArrowLeft','PageUp'].indexOf(k)>-1){e.preventDefault();go(cur-1)}});
+</script>
+</body>
+</html>
+ 
